@@ -32,7 +32,7 @@ static long long lastInBytes,lastOutBytes;
         inUnit = @"M";
         _inBytes = deltaInBytes>>20;
     }else if(deltaInBytes>>10>0){
-        inUnit = @"k";
+        inUnit = @"K";
         _inBytes = deltaInBytes>>10;
     }else {
         _inBytes = deltaInBytes;
