@@ -25,23 +25,23 @@ static long long lastInBytes,lastOutBytes;
     long long deltaOutBytes = outBytes - lastOutBytes;
     lastInBytes = inBytes;
     lastOutBytes = outBytes;
-    NSString *inUnit = @"b";
-    NSString *outUnit = @"b";
+    NSString *inUnit = @"B";
+    NSString *outUnit = @"B";
     long long _inBytes,_outBytes;
     if(deltaInBytes>>20>0){
         inUnit = @"M";
         _inBytes = deltaInBytes>>20;
     }else if(deltaInBytes>>10>0){
         inUnit = @"k";
-        _inBytes = deltaOutBytes>>10;
+        _inBytes = deltaInBytes>>10;
     }else {
-        _inBytes = deltaOutBytes;
+        _inBytes = deltaInBytes;
     }
     if(deltaOutBytes>>20>0){
         outUnit = @"M";
         _outBytes = deltaOutBytes>>20;
-    }else if(deltaInBytes>>10>0){
-        outUnit = @"k";
+    }else if(deltaOutBytes>>10>0){
+        outUnit = @"K";
         _outBytes = deltaOutBytes>>10;
     }else {
         _outBytes = deltaOutBytes;

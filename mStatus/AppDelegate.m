@@ -17,7 +17,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:120];
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:100];
 //    self.statusItem.image = [NSImage imageNamed:NSImageNameUserGroup];
 //    self.statusItem.button.bezelColor = [NSColor redColor];
    
@@ -28,7 +28,8 @@
     //为NSStatusItem添加NSMenu
     NSMenu * theMenu = [[NSMenu alloc] initWithTitle:@"MianMenu"];
 
-    [theMenu insertItemWithTitle:@"退出软件"action:@selector(quit)keyEquivalent:@"" atIndex:0];
+    [theMenu insertItemWithTitle:@"   退出"action:@selector(quit)keyEquivalent:@"" atIndex:0];
+    
     [self.statusItem setMenu:theMenu];
 
 }
